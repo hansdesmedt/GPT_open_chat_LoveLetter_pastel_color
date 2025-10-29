@@ -1,0 +1,13 @@
+# Ignore unnecessary files in Docker build context
+node_modules
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.git
+.github
+.DS_Store
+.env*
+package-lock.json
+package.json
+app.js
+

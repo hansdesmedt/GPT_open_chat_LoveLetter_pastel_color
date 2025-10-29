@@ -1,0 +1,23 @@
+{
+  "name": "gpt_open_chat_loveletter_pastel_color",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "engines": {
+    "node": "^22"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "jsdom": "^27.0.1",
+    "node-fetch": "^3.3.2"
+  }
+}

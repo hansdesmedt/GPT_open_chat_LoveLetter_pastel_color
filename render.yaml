@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: loveletter-pastel
+    env: node
+    plan: starter
+    region: frankfurt
+    rootDir: .
+    buildCommand: ''
+    startCommand: 'node server.js'
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: OPENAI_BASE_URL
+        value: https://api.trellis.inthepocket.net/
+      - key: CHATITP_API_KEY
+        sync: false
+    healthCheckPath: /
+
