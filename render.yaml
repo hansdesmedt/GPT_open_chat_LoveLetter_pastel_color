@@ -6,7 +6,7 @@ services:
     region: frankfurt
     rootDir: .
     buildCommand: ''
-    startCommand: 'node server.js'
+    startCommand: 'node app.js'
     autoDeploy: true
     envVars:
       - key: NODE_ENV

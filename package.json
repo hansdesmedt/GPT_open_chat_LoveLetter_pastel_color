@@ -2,11 +2,11 @@
   "name": "gpt_open_chat_loveletter_pastel_color",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "dev": "node server.js"
+    "start": "node --env-file=.env app.js",
+    "dev": "node --env-file=.env app.js"
   },
   "keywords": [],
   "author": "",
