@@ -1,6 +1,6 @@
 # Love Letter — Pastel GPT Share Viewer (Trellis API)
 
-Schoon herbouwd zonder externe npm dependencies. De app:
+De app:
 - Vraagt om een publieke GPT gesprek URL (share link)
 - Probeert berichten te extraheren uit de HTML (`__NEXT_DATA__`)
 - Valt terug op je Trellis OpenAI gateway om de HTML te laten parsen naar berichten
@@ -17,14 +17,16 @@ Zie `.env.example`.
 
 ## Gebruik
 
-- Start lokaal: `node server.js`
+- Installeer dependencies: `npm install`
+- Start lokaal: `npm start` (of `npm run dev` voor development met .env file)
 - Open: `http://localhost:3000`
 - Plak een gedeelde/publieke GPT chat-URL (bv. `https://chat.openai.com/share/...`)
-- Klik “Love Letter”
+- Kies een thema (💗 Love Letter of 🧻 Toilet Role)
+- Klik "Generate"
 
 ## Deploy opties
 
-Kies één van onderstaande. Deze app heeft geen build stap en draait met `node server.js`.
+Kies één van onderstaande. Deze app heeft geen build stap en draait met `node app.js`.
 
 ### Docker (generiek)
 
@@ -34,9 +36,9 @@ Kies één van onderstaande. Deze app heeft geen build stap en draait met `node 
 ### Render.com
 
 - Repo koppelen aan Render
-- “Web Service” → Runtime Node
-- Start command: `node server.js`
-- Zet env vars: `CHATITP_API_KEY`, optioneel `OPENAI_BASE_URL`
+- "Web Service" → Runtime Node
+- Start command: `npm start`
+- Zet env vars: `CHATITP_API_KEY`, optioneel `OPENAI_BASE_URL`, `GIPHY_API_KEY`
 - Alternatief: gebruik `render.yaml` (Blueprint deploy)
 
 ### Fly.io

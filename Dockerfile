@@ -3,8 +3,12 @@ FROM node:22-alpine
 # App directory
 WORKDIR /app
 
-# Copy only what we need at runtime (no build step)
-COPY server.js ./
+# Copy package files and install dependencies
+COPY package*.json ./
+RUN npm ci --only=production
+
+# Copy app files
+COPY app.js ./
 COPY public ./public
 
 # Environment
@@ -13,6 +17,6 @@ ENV NODE_ENV=production
 # Expose the app port
 EXPOSE 3000
 
-# Start the zero-dependency server
-CMD ["node", "server.js"]
+# Start the app
+CMD ["node", "app.js"]
 
